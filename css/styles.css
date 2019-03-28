@@ -410,6 +410,22 @@ h2 {
   }
 }
 
+.slider {
+  max-width: 450px;
+}
+
+.slider .display {
+  width: 100%;
+}
+
+.slider .in-queue {
+  max-width: 100px;
+}
+
+.slider .queue {
+  margin-top: 15px;
+}
+
 #landing {
   display: -webkit-box;
   display: -ms-flexbox;
