@@ -1,10 +1,25 @@
 h1 {
-    font-size: 4.5em;
-    margin: 0;
+    font-size: 3em;
     font-family: 'Bowlby One SC', cursive;
     font-weight: 400;
+    margin: 15px 0 0;
+}
+.desktop-h1 {
+    display: none;
 }
 
 h2 {
     margin: 0;
+}
+
+@media(min-width: 768px) {
+    h1 {
+        font-size: 4.5em;
+    }
+    .mobile-h1 {
+        display: none;
+    }
+    .desktop-h1 {
+        display: block;
+    }
 }
