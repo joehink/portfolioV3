@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     .container {
         display: flex;
         flex-direction: column;
@@ -22,6 +23,7 @@
         background-position: center;
         flex: 1;
         height: 400px;
+        box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.25)
     }
     i {
         font-size: 1.75em;
