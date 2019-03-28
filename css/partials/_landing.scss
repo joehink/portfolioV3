@@ -1,0 +1,34 @@
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(#ebebeb 0%,#fff 100%);
+    .container {
+        display: flex;
+    }
+
+    .left {
+        display: flex;
+        align-items: flex-start;
+        width: 50%;
+    }
+    .right {
+        width: 50%;
+        padding: 0 1em 0 2.5em;
+    }
+
+    h2 {
+        font-style: italic;
+    }
+
+    img {
+        width: 100%;
+        box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.25)
+    }
+    i {
+        font-size: 1.75em;
+        margin: 0 .75em .5em;
+        display: block;
+        cursor: pointer;
+    }
+}
