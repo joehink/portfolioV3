@@ -1,6 +1,6 @@
 window.onload = function() {
     anime({
-        targets: '#landing',
+        targets: '#landing .container',
         translateY: [-1000, 0],
         opacity: [0, 1],
         duration: 1500,

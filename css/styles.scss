@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Open+Sans:400,700,700i');
 @import 
     "partials/normalize",
+    "partials/animations",
     "partials/headings",
-    "partials/landing";
+    "partials/landing",
+    "partials/projects";
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     height: 100%;
+    background: #f1f1f1;
 }
 body {
     height: 100%;
@@ -17,7 +24,8 @@ p {
 }
 
 section {
-    min-height: 100vh;
+    padding: 2em 0;
+    background: #fff;
 }
 
 .flex {

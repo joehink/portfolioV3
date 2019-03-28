@@ -342,6 +342,44 @@ template {
   display: none;
 }
 
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 h1 {
   font-size: 3em;
   font-family: 'Bowlby One SC', cursive;
@@ -355,6 +393,9 @@ h1 {
 
 h2 {
   margin: 0;
+  font-family: 'Bowlby One SC', cursive;
+  font-weight: 400;
+  font-size: 2em;
 }
 
 @media (min-width: 768px) {
@@ -379,7 +420,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#fff));
+  background-image: linear-gradient(to bottom, #f1f1f1 0%, #fff 100%);
+  min-height: 100vh;
 }
 
 #landing .container {
@@ -404,8 +447,11 @@ h2 {
 }
 
 #landing h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   font-style: italic;
   margin: 15px 0 0;
+  font-size: 1.5em;
 }
 
 #landing .profile-container {
@@ -428,6 +474,12 @@ h2 {
   padding: 0 0 .5em .75em;
 }
 
+#landing i:hover {
+  -webkit-animation: shake .25s linear;
+          animation: shake .25s linear;
+  opacity: .75;
+}
+
 #landing .icons a {
   color: black;
   text-decoration: none;
@@ -439,7 +491,6 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 1em 0;
   }
   #landing .left {
     width: 50%;
@@ -464,8 +515,14 @@ h2 {
   }
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100%;
+  background: #f1f1f1;
 }
 
 body {
@@ -478,7 +535,8 @@ p {
 }
 
 section {
-  min-height: 100vh;
+  padding: 2em 0;
+  background: #fff;
 }
 
 .flex {

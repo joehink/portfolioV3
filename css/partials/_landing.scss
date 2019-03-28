@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(to bottom, #f1f1f1 0%, #fff 100%);
+    min-height: 100vh;
     .container {
         display: flex;
         flex-direction: column;
@@ -13,8 +14,11 @@
         margin-top: 1em;
     }
     h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
         font-style: italic;
         margin: 15px 0 0;
+        font-size: 1.5em;
     }
     .profile-container {
         background: url('../../images/profile.jpg');
@@ -31,6 +35,10 @@
         display: block;
         padding: 0 0 .5em .75em;
     }
+    i:hover {
+        animation: shake .25s linear;
+        opacity: .75;
+    }
     .icons {
         a {
             color: black;
@@ -43,7 +51,6 @@
     #landing {
         .container {
             flex-direction: row;
-            padding: 1em 0;
         }
         .left {
             width: 50%;
