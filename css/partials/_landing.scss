@@ -44,7 +44,7 @@
             text-decoration: none;
             text-align: center;
             position: relative;
-            padding: 0 1em .75em .75em;
+            padding: 0 0 .75em .75em;
             display: block;
         }
     }
@@ -69,6 +69,11 @@
         }
         .profile-container {
             height: 650px;
+        }
+        .icons {
+            a {
+                padding: 0 1.25em 1em 0;
+            }
         }
     }
 }
