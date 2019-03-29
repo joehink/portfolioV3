@@ -1,10 +1,11 @@
 .slider {
     max-width: 450px;
-    overflow: hidden;
     .display-container {
         position: relative;
         display: flex;
         align-items: flex-start;
+        box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.25);
+        overflow: hidden;
     }
     .display {
         width: 100%;
@@ -40,12 +41,14 @@
     .in-queue {
         max-width: 100px;
         opacity: .5;
+        cursor: pointer;
     }
     .queue {
         margin-top: 15px;
         overflow-x: auto;
         display: flex;
         align-items: flex-start;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.25);
     }
     .current {
         opacity: 1;

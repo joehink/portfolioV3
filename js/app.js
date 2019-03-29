@@ -66,6 +66,10 @@ const createSlideShow = (id, urls) => {
         const image = document.createElement('img') ;
         image.src = url
         image.classList.add("in-queue")
+        image.addEventListener("click", () => { 
+            index = urlIndex;
+            display.src = urls[index];
+        })
         if (urlIndex === index) {
             image.classList.add("current")
         }
@@ -93,7 +97,16 @@ const createSlideShow = (id, urls) => {
 window.onload = function() {
     new Rellax('.rellax');
 
-    createSlideShow('circuit-breaker-slider', ["./images/circuitBreaker/1.png", "./images/circuitBreaker/2.png", "./images/circuitBreaker/1.png", "./images/circuitBreaker/2.png", "./images/circuitBreaker/1.png", "./images/circuitBreaker/2.png"])
+    createSlideShow('circuit-breaker-slider', ["./images/circuitBreaker/1.png", "./images/circuitBreaker/2.png", "./images/circuitBreaker/3.png"])
+    createSlideShow('tubeless-slider', ["./images/tubeless/1.png", "./images/tubeless/2.png", "./images/tubeless/3.png", "./images/tubeless/4.png", "./images/tubeless/5.png"])
+    createSlideShow('color-saver-slider', ["./images/colorSaver/1.png", "./images/colorSaver/2.png", "./images/colorSaver/3.png", "./images/colorSaver/4.png", "./images/colorSaver/5.png"])
+    createSlideShow('messenger-slider', ["./images/messenger/1.png", "./images/messenger/2.png"])
+    createSlideShow('memory-board-slider', ["./images/memoryBoard/1.png", "./images/memoryBoard/2.png", "./images/memoryBoard/3.png", "./images/memoryBoard/4.png"])
+    createSlideShow('go-hike-slider', ["./images/goHike/1.jpg"])
+    createSlideShow('youtube-search-slider', ["./images/youtubeSearch/1.png", "./images/youtubeSearch/2.png", "./images/youtubeSearch/3.png"])
+    createSlideShow('trivia-quiz-slider', ["./images/triviaQuiz/1.png", "./images/triviaQuiz/2.png", "./images/triviaQuiz/3.png", "./images/triviaQuiz/4.png"])
+    createSlideShow('football-collection-slider', ["./images/footballCollection/1.png", "./images/footballCollection/2.png"])
+
 
     anime({
         targets: '#landing .container',
