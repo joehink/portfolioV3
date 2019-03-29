@@ -674,9 +674,6 @@ h3 {
 
 #landing i {
   font-size: 1.75em;
-  cursor: pointer;
-  display: block;
-  padding: 0 0 .5em .75em;
 }
 
 #landing i:hover {
@@ -689,6 +686,9 @@ h3 {
   color: black;
   text-decoration: none;
   text-align: center;
+  position: relative;
+  padding: 0 1em .5em .75em;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -710,14 +710,42 @@ h3 {
     width: 50%;
     padding: 0 1em 0 2.5em;
   }
-  #landing i {
-    padding: 0 .75em .5em;
-  }
   #landing h2 {
     margin: 0;
   }
   #landing .profile-container {
     height: 650px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #landing .icons a::before {
+    position: absolute;
+    -webkit-transform: translate(-115%, 25%) scaleX(0);
+            transform: translate(-115%, 25%) scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    z-index: 10;
+  }
+  #landing .icons .linkedIn:before {
+    content: 'LinkedIn';
+  }
+  #landing .icons .github:before {
+    content: 'GitHub';
+  }
+  #landing .icons .email:before {
+    content: 'Email';
+  }
+  #landing .icons .resume:before {
+    content: 'Resume';
+  }
+  #landing .icons a:hover::before {
+    -webkit-transform: translate(-115%, 25%) scaleX(1);
+            transform: translate(-115%, 25%) scaleX(1);
   }
 }
 
