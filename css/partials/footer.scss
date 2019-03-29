@@ -1,0 +1,18 @@
+footer {
+    background: white;
+    padding: 0 0 50px;
+    svg {
+        max-width: 900px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        border: 1px solid black;
+        padding: 2em;
+    }
+}
+
+@media(min-width: 768px) {
+    footer {
+        padding: 100px 0 200px;
+    }
+}

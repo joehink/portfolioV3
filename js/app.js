@@ -138,6 +138,25 @@ window.onload = function() {
             offset: "60%",
             context: document.getElementById('wrapper')
         })
+
+        new Waypoint({
+            element: document.getElementById('thanks'),
+            handler: function() {
+                anime({
+                    targets: 'svg path',
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    duration: 1000,
+                    delay: function(el, i) { return i * 175 },
+                    direction: 'forwards'
+                });
+                this.destroy()
+            },
+            offset: "100%",
+            context: document.getElementById('wrapper')
+        })
+
+
         anime({
             targets: '#landing .container',
             translateY: [-1000, 0],

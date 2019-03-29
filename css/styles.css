@@ -687,7 +687,7 @@ h3 {
   text-decoration: none;
   text-align: center;
   position: relative;
-  padding: 0 1em .5em .75em;
+  padding: 0 1em .75em .75em;
   display: block;
 }
 
@@ -872,6 +872,26 @@ h3 {
   }
   #projects a.github {
     margin-top: 0;
+  }
+}
+
+footer {
+  background: white;
+  padding: 0 0 50px;
+}
+
+footer svg {
+  max-width: 900px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+  padding: 2em;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 100px 0 200px;
   }
 }
 
