@@ -462,6 +462,7 @@ h3 {
 
 .slider {
   max-width: 450px;
+  width: 100%;
 }
 
 .slider .display-container {
@@ -651,6 +652,13 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2em 16px;
 }
 
@@ -659,10 +667,18 @@ h3 {
 }
 
 #projects .project-content {
-  padding-left: 2em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+#projects h2 {
+  text-align: center;
+  padding-left: 0;
+}
+
+#projects h3 {
+  margin-top: 15px;
 }
 
 #projects .technologies {
@@ -680,12 +696,15 @@ h3 {
   text-decoration: none;
   padding: .5em 1em;
   border-radius: 3px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #projects a i {
@@ -701,6 +720,7 @@ h3 {
   color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2fcb53), color-stop(90%, #269f42));
   background-image: linear-gradient(to bottom, #2fcb53, #269f42 90%);
+  margin-top: 10px;
 }
 
 #projects a.site {
@@ -708,6 +728,39 @@ h3 {
   border: 1px solid lightgray;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fafbfc), color-stop(90%, #eff3f6));
   background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+}
+
+@media (min-width: 768px) {
+  #projects .project {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #projects .project-content {
+    padding-left: 2em;
+  }
+  #projects h2 {
+    padding-left: 15px;
+    text-align: left;
+  }
+  #projects h3 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 970px) {
+  #projects a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  #projects a.github {
+    margin-top: 0;
+  }
 }
 
 * {
@@ -730,7 +783,7 @@ p {
 }
 
 section {
-  padding: 2em 0;
+  padding: 0 0 3em;
   background: #fff;
 }
 
