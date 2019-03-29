@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Joe Hinkley | Portfolio</title>
 
+    <!-- Preload.js -->
+    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
     <!-- Rellax.js -->
     <script src="./js/rellax.min.js"></script>
     <!-- Anime.js -->
     <script src="./js/anime.min.js"></script>
+    <!-- Waypoints.js -->
+    <script src="./js/noframework.waypoints.min.js"></script>
 
     <script src="./js/app.js"></script>
 
@@ -18,247 +22,257 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <section id="landing">
-        <div class="container">
-            <h1 class="mobile-h1 rellax" data-rellax-speed="4">Joe<br>Hinkley</h1>
-            <div class="left">
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/joehinkley/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/joehink" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:joe@joehinkley.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-                <div class="profile-container rellax" data-rellax-speed="4"></div>
-            </div>
-            <div class="right">
-                <h1 class="desktop-h1">Joe<br>Hinkley</h1>
-                <h2>Web Developer</h2>
-                <p>
-                    My name is Joe Hinkley, I am a web developer. I have 
-                    worked on a diverse set of applications including 
-                    everything from a digital signage management tool for 
-                    school cafeterias to a mobile application that helps 
-                    hikers all around the world find trails near them.
-                </p>
-                <p>
-                    In addition to my experience as a programmer, I am 
-                    also a skilled Audio Engineer. Internships at three 
-                    well-respected studios have prepared me for any kind 
-                    of audio production whether it be radio, TV, music, 
-                    film, podcasts, or live events.
-                </p>
-                <p>
-                    Thank you for visiting my portfolio!<br>
-                    Joe Hinkley
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <div id="circuit-breaker-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Circuit Breaker</h3>
-                    <p class="technologies">Technolgies: React, Redux, Node.js, Express.js, MongoDB</p>
-                    <p>
-                        Circuit Breaker is a web application designed to walk you through your circuit training routine.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://ga-circuit-breaker.herokuapp.com/" target="_blank" class="site">
-                            Go to Live Site
+    <div id="loading">
+        <div class="loader"></div>
+        <h1>JH</h1>
+    </div>
+    <div id="wrapper">
+        <section id="landing">
+            <div class="container">
+                <h1 class="mobile-h1 rellax" data-rellax-speed="4">Joe<br>Hinkley</h1>
+                <div class="left">
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/joehinkley/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/joehink/circuit-breaker-frontend" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
+                        <a href="https://github.com/joehink" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:joe@joehinkley.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="./files/Resume.pdf" target="_blank">
+                            <i class="fas fa-file"></i>
                         </a>
                     </div>
+                    <div class="profile-container rellax" data-rellax-speed="4"></div>
+                </div>
+                <div class="right">
+                    <h1 class="desktop-h1">Joe<br>Hinkley</h1>
+                    <h2>Web Developer</h2>
+                    <p>
+                        My name is Joe Hinkley, I am a web developer. I have 
+                        worked on a diverse set of applications including 
+                        everything from a digital signage management tool for 
+                        school cafeterias to a mobile application that helps 
+                        hikers all around the world find trails near them.
+                    </p>
+                    <p>
+                        In addition to my experience as a programmer, I am 
+                        also a skilled Audio Engineer. Internships at three 
+                        well-respected studios have prepared me for any kind 
+                        of audio production whether it be radio, TV, music, 
+                        film, podcasts, or live events.
+                    </p>
+                    <p>
+                        Thank you for visiting my portfolio!<br>
+                        Joe Hinkley
+                    </p>
                 </div>
             </div>
-            <hr>
-            <div class="project">
-                <div id="tubeless-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Tubeless</h3>
-                    <p class="technologies">Technolgies: React, Redux, Node.js, Express.js, MongoDB, OAuth, YouTube Data API</p>
-                    <p>
-                        Tubeless is a simplified application that uses the YouTube Data API to give you direct 
-                        access to the videos you want to see. View the uploads of your subscribed channels or 
-                        search for something specific. No recommended videos, no comments, no likes, and no 
-                        dislikes. Just your favorite videos!
-                    </p>
-                    <div class="button-group">
-                        <a href="https://tubeless.herokuapp.com/" target="_blank" class="site">
-                            Go to Live Site
-                        </a>
-                        <a href="https://github.com/joehink/tubeless" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project">
+                    <div id="circuit-breaker-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Circuit Breaker</h3>
+                        <p class="technologies">Technolgies: React, Redux, Node.js, Express.js, MongoDB</p>
+                        <p>
+                            Circuit Breaker is a web application designed to walk you through your circuit training routine.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://ga-circuit-breaker.herokuapp.com/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/circuit-breaker-frontend" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="color-saver-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Color Saver</h3>
-                    <p class="technologies">Technolgies: Node.js, Express.js, EJS, MongoDB, Mongoose, CSS</p>
-                    <p>
-                        Color Saver helps you stay organized while working on your latest design project. Save 
-                        RGB or hexadecimal color values using Color Saver, so you'll have a quick reference to 
-                        your palette, or revisit old projects when you are trying to remember a color that you loved.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://color-saver.herokuapp.com/" target="_blank" class="site">
-                            Go to Live Site
-                        </a>
-                        <a href="https://github.com/joehink/color-saver" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="tubeless-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Tubeless</h3>
+                        <p class="technologies">Technolgies: React, Redux, Node.js, Express.js, MongoDB, OAuth, YouTube Data API</p>
+                        <p>
+                            Tubeless is a simplified application that uses the YouTube Data API to give you direct 
+                            access to the videos you want to see. View the uploads of your subscribed channels or 
+                            search for something specific. No recommended videos, no comments, no likes, and no 
+                            dislikes. Just your favorite videos!
+                        </p>
+                        <div class="button-group">
+                            <a href="https://tubeless.herokuapp.com/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/tubeless" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="messenger-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Messenger</h3>
-                    <p class="technologies">Technolgies: React, Redux, MongoDB, SASS, Jest, Enzyme, Socket.io</p>
-                    <p>
-                        Messenger is a real-time chat application that utilizes WebSockets with Socket.io. 
-                        Create an account to gain access to true instant messaging, and start messaging your 
-                        friends.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://intense-sands-53885.herokuapp.com/" target="_blank" class="site">
-                            Go to Live Site
-                        </a>
-                        <a href="https://github.com/joehink/messenger" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="color-saver-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Color Saver</h3>
+                        <p class="technologies">Technolgies: Node.js, Express.js, EJS, MongoDB, Mongoose, CSS</p>
+                        <p>
+                            Color Saver helps you stay organized while working on your latest design project. Save 
+                            RGB or hexadecimal color values using Color Saver, so you'll have a quick reference to 
+                            your palette, or revisit old projects when you are trying to remember a color that you loved.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://color-saver.herokuapp.com/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/color-saver" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="memory-board-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Memory Board</h3>
-                    <p class="technologies">Technolgies: JavaScript, Chrome API, HTML, CSS</p>
-                    <p>
-                        Memory Board is a productivity tool that offers more functionality than your default copy 
-                        and paste clipboard. Memory board is great for quickly filling out job applications or just 
-                        for saving your most commonly needed pieces of text.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://chrome.google.com/webstore/detail/memory-board/ndihkpdhedeiickpbdkhcelfmlllagpo" target="_blank" class="site">
-                            Go to Chrome Store
-                        </a>
-                        <a href="https://github.com/joehink/memory-board" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="messenger-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Messenger</h3>
+                        <p class="technologies">Technolgies: React, Redux, MongoDB, SASS, Jest, Enzyme, Socket.io</p>
+                        <p>
+                            Messenger is a real-time chat application that utilizes WebSockets with Socket.io. 
+                            Create an account to gain access to true instant messaging, and start messaging your 
+                            friends.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://intense-sands-53885.herokuapp.com/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/messenger" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="go-hike-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Go Hike</h3>
-                    <p class="technologies">Technolgies: React Native, Redux, Firebase</p>
-                    <p>
-                        Go Hike uses your GPS location find hiking trails near you. When you 
-                        decide which trail you want to go to, Go Hike will help provide you 
-                        with driving directions through your favorite navigation app. Once 
-                        you've finished a hike, mark it as completed to see your combined 
-                        stats like total distance and total elevation, or add it to your 
-                        favorites.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://play.google.com/store/apps/details?id=com.joehink.gohike" target="_blank" class="site">
-                            Go to Play Store
-                        </a>
-                        <a href="https://github.com/joehink/pnw-hiking" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="memory-board-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Memory Board</h3>
+                        <p class="technologies">Technolgies: JavaScript, Chrome API, HTML, CSS</p>
+                        <p>
+                            Memory Board is a productivity tool that offers more functionality than your default copy 
+                            and paste clipboard. Memory board is great for quickly filling out job applications or just 
+                            for saving your most commonly needed pieces of text.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://chrome.google.com/webstore/detail/memory-board/ndihkpdhedeiickpbdkhcelfmlllagpo" target="_blank" class="site">
+                                Go to Chrome Store
+                            </a>
+                            <a href="https://github.com/joehink/memory-board" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="youtube-search-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>YouTube Search</h3>
-                    <p class="technologies">Technolgies: JavaScript, JQuery, AJAX, CSS, YouTube Data API</p>
-                    <p>
-                        YouTube Search is a streamlined application for searching YouTube's database of 
-                        videos. Cut the fat out of your YouTube Experience: no comments, no suggestions, 
-                        no likes, and no dislikes. Just search and enjoy your favorite videos!
-                    </p>
-                    <div class="button-group">
-                        <a href="https://joehink.github.io/youtube-search/" target="_blank" class="site">
-                            Go to Live Site
-                        </a>
-                        <a href="https://github.com/joehink/youtube-search" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="go-hike-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Go Hike</h3>
+                        <p class="technologies">Technolgies: React Native, Redux, Firebase</p>
+                        <p>
+                            Go Hike uses your GPS location find hiking trails near you. When you 
+                            decide which trail you want to go to, Go Hike will help provide you 
+                            with driving directions through your favorite navigation app. Once 
+                            you've finished a hike, mark it as completed to see your combined 
+                            stats like total distance and total elevation, or add it to your 
+                            favorites.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://play.google.com/store/apps/details?id=com.joehink.gohike" target="_blank" class="site">
+                                Go to Play Store
+                            </a>
+                            <a href="https://github.com/joehink/pnw-hiking" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="trivia-quiz-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Trivia Quiz</h3>
-                    <p class="technologies">Technolgies: Vue.js, Vuex, AJAX</p>
-                    <p>
-                        Trivia Quiz is a trivia game with a variety of categories.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://joehink.github.io/trivia-quiz/#/" target="_blank" class="site">
-                            Go to Live Site
-                        </a>
-                        <a href="https://github.com/joehink/trivia-quiz" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="youtube-search-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>YouTube Search</h3>
+                        <p class="technologies">Technolgies: JavaScript, JQuery, AJAX, CSS, YouTube Data API</p>
+                        <p>
+                            YouTube Search is a streamlined application for searching YouTube's database of 
+                            videos. Cut the fat out of your YouTube Experience: no comments, no suggestions, 
+                            no likes, and no dislikes. Just search and enjoy your favorite videos!
+                        </p>
+                        <div class="button-group">
+                            <a href="https://joehink.github.io/youtube-search/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/youtube-search" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="project">
-                <div id="football-collection-slider" class="slider"></div>
-                <div class="project-content">
-                    <h3>Football Collection</h3>
-                    <p class="technologies">Technolgies: React, SASS, Recharts</p>
-                    <p>
-                        Football Collection is a interactive visualization of my childhood football card collection.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://joehink.github.io/football-collection/" target="_blank" class="site">
-                            Go to Live Site
-                        </a>
-                        <a href="https://github.com/joehink/football-collection" target="_blank" class="github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                <hr>
+                <div class="project">
+                    <div id="trivia-quiz-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Trivia Quiz</h3>
+                        <p class="technologies">Technolgies: Vue.js, Vuex, AJAX</p>
+                        <p>
+                            Trivia Quiz is a trivia game with a variety of categories.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://joehink.github.io/trivia-quiz/#/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/trivia-quiz" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <hr>
+                <div class="project">
+                    <div id="football-collection-slider" class="slider"></div>
+                    <div class="project-content">
+                        <h3>Football Collection</h3>
+                        <p class="technologies">Technolgies: React, SASS, Recharts</p>
+                        <p>
+                            Football Collection is a interactive visualization of my childhood football card collection.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://joehink.github.io/football-collection/" target="_blank" class="site">
+                                Go to Live Site
+                            </a>
+                            <a href="https://github.com/joehink/football-collection" target="_blank" class="github">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
             </div>
-        </div>
-    </section>
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-        </div>
-    </section>
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-        </div>
-    </section>
+        </section>
+        <!-- <section id="experience">
+            <div class="container">
+                <h2>Experience</h2>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+            </div>
+        </section> -->
+    </div>    
 </body>
 </html>

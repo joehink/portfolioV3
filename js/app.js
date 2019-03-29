@@ -52,6 +52,7 @@ const createSlideShow = (id, urls) => {
         }
     }
 
+    preload.loadFile(urls[index]);
     const displayContainer = document.createElement('div');
     displayContainer.classList.add("display-container");
     const display = document.createElement('img');
@@ -96,9 +97,10 @@ const createSlideShow = (id, urls) => {
 }
 
 
-window.onload = function() {
-    new Rellax('.rellax');
+const preload = new createjs.LoadQueue();
 
+window.onload = function() {
+    preload.loadFile("../images/profile.jpg");
     createSlideShow('circuit-breaker-slider', ["./images/circuitBreaker/1.png", "./images/circuitBreaker/2.png", "./images/circuitBreaker/3.png"])
     createSlideShow('tubeless-slider', ["./images/tubeless/1.png", "./images/tubeless/2.png", "./images/tubeless/3.png", "./images/tubeless/4.png", "./images/tubeless/5.png"])
     createSlideShow('color-saver-slider', ["./images/colorSaver/1.png", "./images/colorSaver/2.png", "./images/colorSaver/3.png", "./images/colorSaver/4.png", "./images/colorSaver/5.png"])
@@ -109,19 +111,52 @@ window.onload = function() {
     createSlideShow('trivia-quiz-slider', ["./images/triviaQuiz/1.png", "./images/triviaQuiz/2.png", "./images/triviaQuiz/3.png", "./images/triviaQuiz/4.png"])
     createSlideShow('football-collection-slider', ["./images/footballCollection/1.png", "./images/footballCollection/2.png"])
 
+    preload.on("complete", () => {
+        new Rellax('.rellax', {
+            wrapper: "#wrapper"
+        });
 
-    anime({
-        targets: '#landing .container',
-        translateY: [-1000, 0],
-        opacity: [0, 1],
-        duration: 1500,
-        easing: 'cubicBezier(.54,0,.54,1.01)'
-    })
-    anime({
-        targets: '#landing i',
-        scale: [0, 1],
-        duration: 500,
-        delay: anime.stagger(200, { start: 1500 }), 
-        easing: 'easeInOutQuad'
+        new Waypoint({
+            element: document.getElementById('projects'),
+            handler: function() {
+                anime({
+                    targets: document.querySelectorAll('.display-container'),
+                    scale: [0, 1],
+                    duration: 500,
+                    delay: anime.stagger(200),
+                    easing: 'easeInOutQuad'
+                })
+                anime({
+                    targets: document.querySelectorAll('hr'),
+                    scaleX: [0, 1],
+                    duration: 2000,
+                    delay: anime.stagger(200),
+                    easing: 'easeInOutQuad'
+                })
+                this.destroy()
+            },
+            offset: "60%",
+            context: document.getElementById('wrapper')
+        })
+        anime({
+            targets: '#landing .container',
+            translateY: [-1000, 0],
+            opacity: [0, 1],
+            duration: 1500,
+            easing: 'cubicBezier(.54,0,.54,1.01)'
+        })
+        anime({
+            targets: '#landing i',
+            scale: [0, 1],
+            duration: 500,
+            delay: anime.stagger(200, { start: 1500 }), 
+            easing: 'easeInOutQuad'
+        })
+
+        const loading = document.getElementById("loading");
+        loading.style.opacity = 0;
+        setTimeout(() => {
+            loading.style.display = "none";
+        }, 1000)
     })
 }
