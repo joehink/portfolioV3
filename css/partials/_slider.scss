@@ -1,12 +1,53 @@
 .slider {
     max-width: 450px;
+    overflow: hidden;
+    .display-container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+    }
     .display {
         width: 100%;
     }
+    .slide-left {
+        animation: slide-left .5s;
+        width: 100%;
+    }
+    .slide-right {
+        animation: slide-right .5s;
+        width: 100%;
+    }
+    .arrow-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); 
+        background: rgba(0,0,0,0.5);
+        color: white;
+        font-size: 32px;
+        padding: 15px 5px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .back {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
+    .arrow-container:hover {
+        opacity: .75;
+    }
     .in-queue {
         max-width: 100px;
+        opacity: .5;
     }
     .queue {
         margin-top: 15px;
+        overflow-x: auto;
+        display: flex;
+        align-items: flex-start;
+    }
+    .current {
+        opacity: 1;
     }
 }

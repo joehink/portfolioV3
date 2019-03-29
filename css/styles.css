@@ -380,6 +380,50 @@ template {
   }
 }
 
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 h1 {
   font-size: 3em;
   font-family: 'Bowlby One SC', cursive;
@@ -412,18 +456,78 @@ h2 {
 
 .slider {
   max-width: 450px;
+  overflow: hidden;
+}
+
+.slider .display-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .slider .display {
   width: 100%;
 }
 
+.slider .slide-left {
+  -webkit-animation: slide-left .5s;
+          animation: slide-left .5s;
+  width: 100%;
+}
+
+.slider .slide-right {
+  -webkit-animation: slide-right .5s;
+          animation: slide-right .5s;
+  width: 100%;
+}
+
+.slider .arrow-container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 32px;
+  padding: 15px 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider .back {
+  left: 0;
+}
+
+.slider .next {
+  right: 0;
+}
+
+.slider .arrow-container:hover {
+  opacity: .75;
+}
+
 .slider .in-queue {
   max-width: 100px;
+  opacity: .5;
 }
 
 .slider .queue {
   margin-top: 15px;
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.slider .current {
+  opacity: 1;
 }
 
 #landing {

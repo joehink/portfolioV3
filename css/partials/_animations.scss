@@ -4,3 +4,13 @@
     75% { transform: rotate(10deg) }
     100% { transform: rotate(0deg)}
 }
+
+@keyframes slide-left {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(-100%)}
+}
+
+@keyframes slide-right {
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(0)}
+}
