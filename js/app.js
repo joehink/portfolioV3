@@ -69,6 +69,8 @@ const createSlideShow = (id, urls) => {
         image.addEventListener("click", () => { 
             index = urlIndex;
             display.src = urls[index];
+            [...queue.children].forEach(child => child.classList.remove("current"));
+            image.classList.add("current");
         })
         if (urlIndex === index) {
             image.classList.add("current")
