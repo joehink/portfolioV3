@@ -1,0 +1,25 @@
+footer {
+    margin-top: 25px;
+    padding: 50px 0;
+    background: #f1f1f1;
+    svg {
+        max-width: 900px;
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: center;
+        border: 1px solid black;
+        padding: 1em;
+        background: white;
+    }
+}
+
+@media(min-width: 768px) {
+    footer {
+        padding: 150px;
+        margin-top: 50px;
+    }
+    svg {
+        padding: 2em;
+    }
+}

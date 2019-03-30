@@ -827,7 +827,7 @@ h3 {
   color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2fcb53), color-stop(90%, #269f42));
   background-image: linear-gradient(to bottom, #2fcb53, #269f42 90%);
-  margin-top: 10px;
+  margin: 10px 0 0 0;
 }
 
 #projects a.site {
@@ -866,33 +866,45 @@ h3 {
 }
 
 @media (min-width: 970px) {
+  #projects .button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   #projects a {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
   #projects a.github {
-    margin-top: 0;
+    margin: 0 0 0 10px;
   }
 }
 
 footer {
-  background: white;
-  padding: 0 0 50px;
+  margin-top: 25px;
+  padding: 50px 0;
+  background: #f1f1f1;
 }
 
 footer svg {
   max-width: 900px;
+  width: 100%;
   display: block;
   margin: auto;
   text-align: center;
   border: 1px solid black;
-  padding: 2em;
+  padding: 1em;
+  background: white;
 }
 
 @media (min-width: 768px) {
   footer {
-    padding: 100px 0 200px;
+    padding: 150px;
+    margin-top: 50px;
+  }
+  svg {
+    padding: 2em;
   }
 }
 
@@ -909,6 +921,7 @@ html {
 body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background: white;
 }
 
 #wrapper {

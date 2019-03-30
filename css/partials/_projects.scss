@@ -48,7 +48,7 @@
     a.github {
         color: white;
         background-image: linear-gradient(to bottom,#2fcb53,#269f42 90%);
-        margin-top: 10px;
+        margin: 10px 0 0 0;
     }
     a.site {
         color: black;
@@ -82,11 +82,14 @@
 
 @media(min-width: 970px) {
     #projects {
+        .button-group {
+            display: flex;
+        }
         a {
             display: inline-flex;
         }
         a.github {
-            margin-top: 0;
+            margin: 0 0 0 10px;
         }
     }
 }
