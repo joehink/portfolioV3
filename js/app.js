@@ -100,6 +100,23 @@ const createSlideShow = (id, urls) => {
 const preload = new createjs.LoadQueue();
 
 window.onload = function() {
+    const downArrow = document.querySelector(".bounce");
+    downArrow.addEventListener("click", () => { 
+        document
+            .getElementById("projects")
+            .scrollIntoView({behavior: "smooth", block: "nearest"})
+    })
+
+    const wrapper = document.getElementById("wrapper");
+    wrapper.onscroll = () => {
+        if (wrapper.scrollTop > 5) {
+            downArrow.style.opacity = 0;
+        } else {
+            downArrow.style.opacity = 1;
+        }
+    }
+
+
     preload.loadFile("../images/profile.jpg");
     createSlideShow('circuit-breaker-slider', ["./images/circuitBreaker/1.png", "./images/circuitBreaker/2.png", "./images/circuitBreaker/3.png"])
     createSlideShow('tubeless-slider', ["./images/tubeless/1.png", "./images/tubeless/2.png", "./images/tubeless/3.png", "./images/tubeless/4.png", "./images/tubeless/5.png"])
